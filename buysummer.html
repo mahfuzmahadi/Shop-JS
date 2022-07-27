@@ -1,0 +1,106 @@
+<HTML>
+<head>
+    <title> Fast Food Store </title>
+	<link href="styles/search.css" type="text/css" rel="stylesheet" />
+
+  <style>
+    img{
+      width: 350px;
+      height: 300px;
+    }
+  </style>
+	<body>
+	<div class="container">
+    
+  </div>
+  <a href="index.html" class="button">Back</a>
+  
+  <figure>
+  <h1> We use fresh, local ingredients to deliver the highest quality of meals</h1>
+  <h2>Search and Click on image which you want to buy</h2>
+  <section class="wrapper">
+    <input type="search" id="search-box" onkeyup="mySearch()" placeholder="Search" />
+    <section class="content">
+        <ul id="myItem">
+            <li class="product"><a href="buy.html"><img src="images/buy/360_F_118599065_lAhhSCMNdeLItHc78wk42HnovHnylFjN.jpg"></a>
+                <p>Authentic Tonkotsu Ramen </p>
+
+            </li>
+           
+            <li class="product"><a href="buy.html"><img src="images/buy/360_F_222473550_jsLZPNgo9YwdG7PpjxfODn8NBWbJ7ekh.jpg"></a>
+                <p>Beef Taco</p></li>
+            
+            <li class="product"><a href="buy.html"><img src="images/buy/burgers-meat-minced-meat-vegetables-wallpaper-preview.jpg"></a>
+                <p>Beef Meat ball</p></li>
+            
+            <li class="product"><a href="buy.html"><img src="images/buy/depositphotos_21587691-stock-photo-sandwich-toast.jpg"></a>
+                <p>Club Sandwitch</p></li> 
+            
+            <li class="product"><a href="buy.html"><img src="images/buy/depositphotos_7500691-stock-photo-tasty-grilled-meat-shish-kebab.jpg"></a>
+                <p>Beef Stick</p></li>
+            
+            
+            <li class="product"><a href="buy.html"><img src="images/buy/Doughnuts-740x555.jpg"></a>
+                <p>Donuts</p></li>
+            
+            <li class="product"><a href="buy.html"><img src="images/buy/hot-diggity-big-kahuna-hot-dog.webp"></a>
+                <p>Cheese Hotdog</p></li>
+           
+            <li class="product"><a href="buy.html"><img src="images/buy/istockphoto-1140441708-612x612.jpg"></a>
+                <p>Chicken Noodles</p></li> 
+           
+            <li class="product"><a href="buy.html"><img src="images/buy/istockphoto-1207976129-612x612.jpg"></a>
+                <p>4 pcs. Chicken fry</p></li>
+            
+            <li class="product"><a href="buy.html"><img src="images/buy/istockphoto-1287907400-612x612.jpg"></a>
+                <p>authentic ramen japanese</p></li>
+            
+            <li class="product"><a href="buy.html"><img src="images/buy/istockphoto-157431311-612x612.jpg"></a>
+                <p>vegetable Sandwitch</p></li> 
+            
+            <li class="product"><a href="buy.html"><img src="images/buy/Screenshot_1.png"></a>
+                <p>vegetable shawrma</p></li>
+            <li class="product"><a href="buy.html"><img src="images/pizzahut/360_F_301819444_VWRpS5E6JBYqByrH9HoAlu59w8wdwOqI.jpg"></a>
+                  <p>vegetable pizza</p></li>
+           <li class="product"><a href="buy.html"><img src="images/buy/shawarma-with-tomato-salsa-corn-beef-isolated-white-background_207126-8146.jpg"></a>
+                    <p>Chicken Shawrma</p></li>
+           <li class="product"><a href="buy.html"><img src="images/buy/Screenshot_2.png"></a>
+                      <p>Special chicken burger</p></li>
+           <li class="product"><a href="buy.html"><img src="images/buy/vegetable-soup-isolated-white-background_123827-13483.webp"></a>
+                        <p>vegetable soup</p></li>
+          <li class="product"><a href="buy.html"><img src="images/buy/traditional-mexican-tacos-with-meat-vegetables-isolated-white-background_123827-19905.webp"></a>
+                          <p>traditional tacos</p></li>
+           <li class="product"><a href="buy.html"><img src="images/buy/TomatoBasilSoup_Detail-0020_2022.jpg"></a>
+                            <p>Tomato Basil Soup</p></li>
+          <li class="product"><a href="buy.html"><img src="images/buy/skewers-cucumber-tomato-white-background-wallpaper-preview.jpg"></a>
+                              <p>Skewers Cucumber tomato</p></li>
+        </ul>
+    </section>
+</section>
+
+</figure>
+<script type="text/javascript">
+  function mySearch(){
+      var input,filter,ul,li,p,i;
+      input = document.getElementById("search-box");
+      filter = input.value.toUpperCase();
+
+      ul = document.getElementById("myItem");
+      li = ul.getElementsByTagName("li");
+
+      for(i=0; i < li.length; i++){
+          
+          p = li[i].getElementsByTagName("p")[0];
+          
+          if(p.innerHTML.toUpperCase().indexOf(filter) > -1){
+              li[i].style.display = "";
+          }
+          else{
+              li[i].style.display = "none";
+          }
+      }
+  }
+</script>
+</body>
+
+</html>

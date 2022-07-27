@@ -1,0 +1,67 @@
+<HTML>
+<head>
+    <title> Fast Food Store </title>
+	<link href="styles/site.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="images/Fast Food Storelogo.png">
+	<body>
+	<div class="container">  
+  </div>
+<div class="topnav" id="myTopnav">
+  <a href="index.html" >Home</a>
+  <a href="brands.html">Brands</a>
+  <a href="contact.html" class="current">Contact Us</a>
+  <a href="about.html">About</a>
+  <a href="register.html">Register Here</a>
+</div>
+<div id="main">
+<h1>Contact Us </h1>
+<p>Feel Free To Contact Us </p><a href="https://www.facebook.com/mahadimahfuz" class="fa fa-facebook"></a>
+    <form method = "POST" class = "contact-form">
+        <input type = "text" class = "name" placeholder = "Enter Name">
+        <input type = "email" class = "email" placeholder = "Enter Email">
+        <button style="width: 100%;padding: 20px; "  type = "submit">Submit</button>
+    </form>
+
+
+
+<script src=
+    "https://smtpjs.com/v3/smtp.js">
+  </script>
+
+<script>
+    const form = document.querySelector(".contact-form");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let name = document.querySelector(".name").value;
+    let email = document.querySelector(".email").value;
+  
+    
+
+
+    document.querySelector(".contact-form").reset();
+
+    sendEmail(name, email);
+  })
+  function sendEmail(name, email){
+    Email.send({
+        
+      Host: "smtp.elasticemail.com", 
+      Username: "mahfuz.05031999@gmail.com",
+      Password: "410759D9424C19B3A5462B3DD4BC9B846F18",
+      To: "mahfuzurmahadi@gmail.com",
+      From: "mahfuz.05031999@gmail.com",
+      Subject: `${name} Just messaged you from the website form`,
+      Body: `Name: ${name} <br> Email: ${email} <br>`,
+    }).then((success) => {
+     
+      alert("message sent successfully. Please check the spam folder in your mail.");
+    }).catch((error) => {
+        
+      alert("error sending message");
+    })
+  }
+</script>
+</body>
+
+</html>

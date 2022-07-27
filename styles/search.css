@@ -1,0 +1,103 @@
+body{
+    width: 100%;
+    margin: 0 auto;
+    font-family: Segoe UI;
+}
+.container{
+    background: #F9ED33;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*--------Collapsing Fix issue---------*/
+
+.container::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+h2{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #111;
+}
+h2::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+.wrapper input[type="search"]{
+    font-size: 16px;
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    padding: 4px 16px;
+    margin-top: 30px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    outline: none;
+    color: #333;
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+} 
+.content ul{
+    margin: 20px 0 0 0 ;
+    padding: 0;
+    list-style: none;
+}
+
+.content ul li.product{
+    width: 32%;
+    float: left;
+}
+.content ul li.product:not(:nth-child(3n)){
+    margin-right: 2%;
+}
+
+.content ul li img{
+    width: 100%;
+}
+.content ul li img:hover{
+    
+}
+.content ul li p{
+    font-family: sans-serif;
+    margin: 0px 0px 15px 0px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #333;
+    text-align: center;
+}
+
+
+/*------Responsive--------------*/
+
+@media screen and (max-width:600px){
+    
+    .container{
+        width: 100%;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .wrapper input[type="search"]{
+        font-size: 12px;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 15px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    
+    .content ul li.product{
+    width: 80%;
+    margin-left: 10%;
+}
+}
